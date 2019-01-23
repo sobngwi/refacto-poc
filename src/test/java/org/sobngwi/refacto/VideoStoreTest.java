@@ -24,8 +24,8 @@ public class VideoStoreTest extends TestCase
 	}
 
 	public void testSingleChildrensStatement () {
-		customer.addRental (new Rental (new Movie ("The Tigger Movie", Movie.CHILDRENS), 3));
-		assertEquals ("Rental Record for Fred\n\tThe Tigger Movie\t1.5\nYou owed 1.5\nYou earned 1 frequent renter points\n", customer.statement ());
+		customer.addRental (new Rental (new Movie ("The Tigger Movie", Movie.CHILDRENS), 4));
+		assertEquals ("Rental Record for Fred\n\tThe Tigger Movie\t3.0\nYou owed 3.0\nYou earned 1 frequent renter points\n", customer.statement ());
 	}
 	
 	public void testMultipleRegularStatement () {
