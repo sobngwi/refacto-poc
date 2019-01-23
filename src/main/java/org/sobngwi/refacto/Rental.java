@@ -6,15 +6,20 @@ public class Rental
 		this.movie 		= movie;
 		this.daysRented = daysRented;
 	}
-	
-	public int getDaysRented () {
-		return daysRented;
-	}
-	
-	public Movie getMovie () {
-		return movie;
-	}
-	
+
 	private Movie movie;
 	private int daysRented;
+
+	public String getMovieTitle() {
+	    return movie.getTitle();
+	}
+
+	double determineAmount() {
+		return movie.determineAmount(daysRented);
+	}
+
+	int determineFrequentRentalPoint(){
+		return movie.determineFrequentRentalPoint(daysRented);
+	}
+
 }
